@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Outside Construction Transition Guide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-title">Outside Construction Transition Guide</div>
+      <div class="brand-sub">Interactive, offline-ready</div>
+    </div>
+
+    <div class="top-actions">
+      <input id="search" class="search" type="search" placeholder="Search headings & text…" autocomplete="off" />
+      <button id="toggleChecklist" class="btn" type="button" title="Open master checklist">Checklist</button>
+      <button id="print" class="btn" type="button" title="Print / Save to PDF">Print</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="muted">Table of contents</div>
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span>Progress</span>
+            <span id="progressText">0%</span>
+          </div>
+          <div class="progress">
+            <div id="progressBar" class="progress-bar" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+      <nav id="toc" class="toc"></nav>
+      <footer class="sidebar-footer muted">
+        Your checkmarks save in this browser (local storage).
+      </footer>
+    </aside>
+
+    <main class="main">
+      <div id="content" class="content"></div>
+    </main>
+  </div>
+
+  <dialog id="checklistDialog" class="dialog">
+    <form method="dialog" class="dialog-inner">
+      <div class="dialog-header">
+        <div>
+          <div class="dialog-title">Master checklist</div>
+          <div class="muted">Across all sections</div>
+        </div>
+        <button class="btn" value="cancel" type="submit">Close</button>
+      </div>
+
+      <div class="dialog-body">
+        <div class="dialog-actions">
+          <button id="markAll" class="btn" type="button">Mark all</button>
+          <button id="clearAll" class="btn btn-ghost" type="button">Clear all</button>
+        </div>
+        <div id="masterChecklist" class="master-checklist"></div>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
