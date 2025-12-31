@@ -235,13 +235,13 @@ body{
 }
 
 
-}.brand-logo{
+}/* Tramp Or Die — logo visibility on dark header */
+.brand-logo{
   height: 42px;
   width: auto;
-  filter: invert(1);
+  filter: invert(1) contrast(1.1);
 }
 
-}
 
 
 .brand-title {
