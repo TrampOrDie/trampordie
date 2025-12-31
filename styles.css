@@ -234,10 +234,15 @@ body{
   gap: 12px;
 }
 
-.brand-logo {
+
+}.brand-logo{
   height: 42px;
   width: auto;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 999px;
 }
+
 
 .brand-title {
   font-weight: 700;
