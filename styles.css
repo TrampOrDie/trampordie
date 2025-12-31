@@ -33,8 +33,6 @@ body{
   backdrop-filter: blur(10px);
 }
 
-.brand-title{font-weight:800; letter-spacing:.2px}
-.brand-sub{font-size:12px; color:var(--muted); margin-top:2px}
 
 .top-actions{display:flex; gap:10px; align-items:center}
 .search{
@@ -249,4 +247,40 @@ body{
 .brand-sub {
   font-size: 12px;
   opacity: 0.7;
+}/* ===== BRANDING ===== */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
+
+.brand-logo {
+  height: 42px;
+  width: auto;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-title {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0.85;
+}
+<div class="brand" onclick="location.reload()">
+@media (max-width: 980px) {
+  .brand-logo {
+    height: 36px;
+  }
+}
+
