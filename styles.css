@@ -238,9 +238,9 @@ body{
 }.brand-logo{
   height: 42px;
   width: auto;
-  background: #fff;
-  padding: 8px 10px;
-  border-radius: 999px;
+  filter: invert(1);
+}
+
 }
 
 
