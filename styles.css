@@ -132,80 +132,9 @@ body{
 
 /* ===== LAYOUT ===== */
 .layout{
-  display:grid;
-  grid-template-columns: 330px 1fr;
+  display: block;
   min-height: calc(100vh - 62px);
 }
-
-.sidebar{
-  border-right:1px solid var(--border);
-  padding:14px;
-  background: rgba(15,17,23,.55);
-}
-
-.sidebar-header{padding:10px 10px 12px}
-.muted{color:var(--muted); font-size:12px}
-
-.progress-wrap{
-  margin-top:10px;
-  padding:10px;
-  border:1px solid var(--border);
-  border-radius: var(--radius);
-  background: rgba(17,19,26,.55)
-}
-.progress-label{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  font-size:12px;
-  color:var(--muted);
-  margin-bottom:8px
-}
-.progress{
-  height:10px;
-  background: rgba(255,255,255,.06);
-  border-radius: 999px;
-  overflow:hidden
-}
-.progress-bar{
-  height:100%;
-  background: linear-gradient(90deg, var(--accent), var(--good));
-  width:0%
-}
-
-.toc{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-  padding:8px 6px 12px;
-  overflow:auto;
-  max-height: calc(100vh - 260px)
-}
-.toc a{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  text-decoration:none;
-  color:var(--text);
-  padding:10px 12px;
-  border-radius: 14px;
-  border:1px solid transparent;
-}
-.toc a:hover{background: rgba(255,255,255,.04); border-color: rgba(110,168,254,.18)}
-.toc a.active{background: rgba(110,168,254,.12); border-color: rgba(110,168,254,.35)}
-.toc .dot{
-  width:10px; height:10px; border-radius:50%;
-  margin-top:4px;
-  border:1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.06);
-  flex: 0 0 auto;
-}
-.toc .dot.done{background: rgba(46,229,157,.85); border-color: rgba(46,229,157,.9)}
-.toc .label{font-size:14px; line-height:1.2}
-.toc .sub{font-size:11px; color:var(--muted); margin-top:2px}
-
-.sidebar-footer{padding:10px 10px 0}
-
 .main{padding:18px}
 .content{
   max-width: 980px;
