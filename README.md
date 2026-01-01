@@ -1,4 +1,4 @@
-# Outside Construction Transition Guide — Interactive Web App
+# Outside Construction Transition Guide
 
 This is a static (no-server) web app. It works locally and on Netlify.
 
