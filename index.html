@@ -12,20 +12,14 @@
 <body>
   <!-- TOP HEADER -->
   <header class="topbar">
-    <!-- Left: small brand text (optional) -->
-    <div class="topbar-left">
-      <div class="brand-mini">
-        <div class="brand-mini-title">Tramp Or Die</div>
-        <div class="brand-mini-sub">Interactive guide</div>
+    <div class="topbar-left brand">
+      <img src="assets/logo-bw.png?v=2" class="brand-logo" alt="Tramp Or Die" />
+      <div class="brand-text">
+        <div class="brand-title">Tramp Or Die</div>
+        <div class="brand-sub">Interactive guide</div>
       </div>
     </div>
 
-    <!-- Center: BIG centered logo -->
-    <div class="topbar-center">
-      <img src="assets/logo-bw.png?v=2" class="topbar-logo" alt="Tramp Or Die" />
-    </div>
-
-    <!-- Right: actions -->
     <div class="topbar-right top-actions">
       <input id="search" class="search" type="search" placeholder="Search headings & text…" autocomplete="off" />
       <button id="toggleChecklist" class="btn" type="button" title="Open master checklist">Checklist</button>
@@ -34,13 +28,13 @@
   </header>
 
   <!-- HERO SPLASH -->
-  <section class="hero" aria-label="Hero">
-    <img src="assets/logo-bw.png?v=2" class="hero-logo" alt="Tramp Or Die" />
+  <section class="hero">
+    <img src="assets/logo-bw.png?v=2" class="hero-logo" alt="Tramp Or Die logo" />
     <h1 class="hero-title">Outside Construction Transition Guide</h1>
     <p class="hero-sub">Interactive, offline-ready</p>
   </section>
 
-  <!-- MAIN LAYOUT -->
+  <!-- APP LAYOUT -->
   <div class="layout">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
@@ -85,6 +79,7 @@
           <button id="markAll" class="btn" type="button">Mark all</button>
           <button id="clearAll" class="btn btn-ghost" type="button">Clear all</button>
         </div>
+
         <div id="masterChecklist" class="master-checklist"></div>
       </div>
     </form>
@@ -93,4 +88,5 @@
   <script src="app.js?v=2"></script>
 </body>
 </html>
+
 
