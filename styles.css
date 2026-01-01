@@ -69,7 +69,7 @@ body{
 .btn:active{transform: translateY(1px)}
 .btn-ghost{background: transparent}
 
-/* ===== LOGO — FORCE WHITE EVERYWHERE ===== */
+
 
 /* Header logos */
 .brand-logo,
@@ -78,13 +78,13 @@ body{
   width: auto;
   display: block;
 
-  /* force black logo to pure white */
+ 
 
 }
 
 /* Hero logo (bigger) */
 .hero-logo{
-  height: 160px;
+  height: 200px;
   width: auto;
   display: block;
 
@@ -344,8 +344,8 @@ body{
   .layout{grid-template-columns: 1fr}
   .sidebar{display:none}
   .grid2{grid-template-columns: 1fr}
-  .search{width: 48vw}
-  .hero-logo{height: 120px}
+  .search{width: 40vw}
+  .hero-logo{height: 140px}
   .brand-logo{height: 36px}
 }
 
