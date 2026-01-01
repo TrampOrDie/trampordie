@@ -60,16 +60,16 @@ function computeProgress(data, state){
   const pct = total ? Math.round((done/total)*100) : 0;
   return {total, done, pct};
 }
-
 function updateProgressUI(data, state){
+  if(!progressBar || !progressText) return;
   const {pct} = computeProgress(data, state);
   progressBar.style.width = pct + "%";
   progressText.textContent = pct + "%";
 }
-
 function buildTOC(data, state){
+  if(!tocEl) return;
   tocEl.innerHTML = "";
-  data.sections.forEach((sec, i)=>{
+  data.sections.forEach((sec)=>{
     const a = document.createElement("a");
     a.href = `#${sec.slug}`;
     a.dataset.slug = sec.slug;
@@ -77,7 +77,6 @@ function buildTOC(data, state){
     const dot = document.createElement("span");
     dot.className = "dot";
 
-    // done if all items in checklist done (or no checklist -> never marked done)
     if(sec.checklist && sec.checklist.length){
       const allDone = sec.checklist.every((_, idx)=> state[sectionKey(sec.slug, idx)]);
       if(allDone) dot.classList.add("done");
@@ -90,7 +89,9 @@ function buildTOC(data, state){
 
     const sub = document.createElement("div");
     sub.className = "sub";
-    const meta = sec.checklist?.length ? `${sec.checklist.length} checklist item(s)` : `${sec.content.length} paragraph(s)`;
+    const meta = sec.checklist?.length
+      ? `${sec.checklist.length} checklist item(s)`
+      : `${sec.content.length} paragraph(s)`;
     sub.textContent = meta;
 
     labelWrap.appendChild(label);
