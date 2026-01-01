@@ -79,7 +79,7 @@ body{
   display: block;
 
   /* force black logo to pure white */
-  filter: invert(1) brightness(2) contrast(1.2);
+
 }
 
 /* Hero logo (bigger) */
@@ -88,7 +88,7 @@ body{
   width: auto;
   display: block;
 
-  filter: invert(1) brightness(2) contrast(1.2);
+  
 }
 
 .brand-text{
