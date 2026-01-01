@@ -1,9 +1,8 @@
-
-
 # Optional: SPA-style fallback (keeps links working if you add deep links later)
 [[redirects]]
-  from = "/assets/*"
-  to = "/assets/:splat"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200
+
 
 
