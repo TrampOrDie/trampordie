@@ -49,17 +49,28 @@ body{
 
 /* bigger centered logo */
 .topbar-logo{
-  height: 56px;
+  height: 66px;
   width:auto;
   display:block;
-  filter: invert(1) brightness(1.9) contrast(1.1) drop-shadow(0 10px 22px rgba(0,0,0,.45));
-}
 
+/* Header logo */
+.topbar-logo{
+  height: 66px;
+  width: auto;
+  display:block;
+  
+/* force it to read as white */
+  filter: invert(1) grayscale(1) brightness(2.4) contrast(1.25);
+
+  /* remove muddy shadows */
+  drop-shadow: none;
+}
+  
 /* Right-side actions */
 .top-actions{display:flex; gap:10px; align-items:center}
 
 .search{
-  width:min(520px, 46vw);
+  width:min(420px, 46vw);
   padding:10px 12px;
   border:1px solid var(--border);
   background: rgba(17,19,26,.65);
@@ -92,12 +103,16 @@ body{
   place-items:center;
   gap:10px;
 }
-
+/* Hero logo */
 .hero-logo{
-  height: 150px;
-  width:auto;
+  height: 160px;
+  width: auto;
   display:block;
-  filter: invert(1) brightness(1.9) contrast(1.1) drop-shadow(0 18px 40px rgba(0,0,0,.55));
+
+  filter: invert(1) grayscale(1) brightness(2.4) contrast(1.25);
+
+/* keep shadow very subtle (or remove entirely) */
+/* filter already applied above, so use box-shadow instead of drop-shadow */
 }
 
 .hero-title{
