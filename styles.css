@@ -228,54 +228,56 @@ body{
   .card-body{display:block !important}
   .grid2{grid-template-columns: 1fr}
   .box{border:1px solid #eee; background:#fff}
- .brand-logo{
-  display: flex;
+}
+ /* ===== TOPBAR LAYOUT (CENTER LOGO) ===== */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 12px;
+
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(11,12,16,.72);
+  backdrop-filter: blur(10px);
 }
 
-/* ===== HEADER BRAND LOGO (white + bigger) ===== */
-.brand-logo{
+.topbar-left{justify-self:start}
+.topbar-center{justify-self:center}
+.topbar-right{justify-self:end}
+
+/* Bigger centered logo in the header */
+.topbar-logo{
   height: 52px;
   width: auto;
-  /* makes a black logo appear white on dark bg */
-  filter: invert(1) brightness(2) contrast(1.1);
-  /* optional: a soft glow instead of dark shadow */
-  drop-shadow: 0 6px 18px rgba(0,0,0,.25);
-}
 
-@media (max-width: 980px){
-  .brand-logo{ height: 42px; }
+  /* makes dark logo appear white on dark backgrounds */
+  filter: invert(1) brightness(1.9) contrast(1.1) drop-shadow(0 10px 22px rgba(0,0,0,.45));
 }
 
 /* ===== HERO SPLASH ===== */
 .hero{
-  min-height: calc(100vh - 62px); /* full screen minus sticky header */
+  padding: 34px 18px 22px;
+  text-align: center;
   display: grid;
   place-items: center;
-  padding: 28px 18px;
-}
-
-.hero-inner{
-  text-align: center;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
 .hero-logo{
-  height: 160px;          /* BIG logo */
+  height: 140px;
   width: auto;
-  filter: invert(1) brightness(2) contrast(1.1);
+  filter: invert(1) brightness(1.9) contrast(1.1) drop-shadow(0 18px 40px rgba(0,0,0,.55));
 }
 
 .hero-title{
   margin: 0;
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(22px, 3.2vw, 40px);
   font-weight: 900;
-  letter-spacing: .3px;
+  letter-spacing: .2px;
 }
 
 .hero-sub{
@@ -284,9 +286,15 @@ body{
   font-size: 14px;
 }
 
+/* Mobile tweaks */
 @media (max-width: 980px){
-  .hero-logo{ height: 110px; }
-}
+  .topbar{
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+  }
 
+  .topbar-logo{height: 44px}
+  .hero-logo{height: 110px}
+}
 
 
