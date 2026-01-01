@@ -19,58 +19,32 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 700px at 20% -10%, rgba(110,168,254,.18), transparent 60%),
-              radial-gradient(1000px 600px at 100% 0%, rgba(46,229,157,.10), transparent 55%),
-              var(--bg);
+  background:
+    radial-gradient(1200px 700px at 20% -10%, rgba(110,168,254,.18), transparent 60%),
+    radial-gradient(1000px 600px at 100% 0%, rgba(46,229,157,.10), transparent 55%),
+    var(--bg);
   color:var(--text);
 }
 
-/* ===== TOPBAR (CENTER LOGO) ===== */
+/* ===== TOPBAR ===== */
 .topbar{
-  position:sticky; top:0; z-index:10;
-
-  display:grid;
-  grid-template-columns: 1fr auto 1fr;
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
   align-items:center;
-
+  justify-content:space-between;
+  gap:14px;
   padding:14px 18px;
   border-bottom:1px solid var(--border);
   background: rgba(11,12,16,.72);
   backdrop-filter: blur(10px);
 }
 
-.topbar-left{justify-self:start}
-.topbar-center{justify-self:center}
-.topbar-right{justify-self:end}
-
-.brand-mini{display:flex; flex-direction:column; line-height:1.1}
-.brand-mini-title{font-weight:850; letter-spacing:.3px}
-.brand-mini-sub{font-size:12px; color:var(--muted); opacity:.9}
-
-/* bigger centered logo */
-.topbar-logo{
-  height: 66px;
-  width:auto;
-  display:block;
-
-/* Header logo */
-.topbar-logo{
-  height: 66px;
-  width: auto;
-  display:block;
-  
-/* force it to read as white */
-  filter: invert(1) grayscale(1) brightness(2.4) contrast(1.25);
-
-  /* remove muddy shadows */
-  drop-shadow: none;
-}
-  
-/* Right-side actions */
 .top-actions{display:flex; gap:10px; align-items:center}
 
 .search{
-  width:min(420px, 46vw);
+  width:min(520px, 46vw);
   padding:10px 12px;
   border:1px solid var(--border);
   background: rgba(17,19,26,.65);
@@ -95,7 +69,38 @@ body{
 .btn:active{transform: translateY(1px)}
 .btn-ghost{background: transparent}
 
-/* ===== HERO SPLASH ===== */
+/* ===== BRANDING ===== */
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-logo{
+  height:42px;
+  width:auto;
+  /* logo is already white -> NO invert */
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.45));
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.brand-title{
+  font-weight:800;
+  letter-spacing:.4px;
+}
+
+.brand-sub{
+  font-size:12px;
+  color:var(--muted);
+  opacity:.85;
+}
+
+/* ===== HERO ===== */
 .hero{
   padding: 34px 18px 22px;
   text-align:center;
@@ -103,29 +108,25 @@ body{
   place-items:center;
   gap:10px;
 }
-/* Hero logo */
+
 .hero-logo{
   height: 160px;
-  width: auto;
-  display:block;
-
-  filter: invert(1) grayscale(1) brightness(2.4) contrast(1.25);
-
-/* keep shadow very subtle (or remove entirely) */
-/* filter already applied above, so use box-shadow instead of drop-shadow */
+  width:auto;
+  /* crisp white */
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,.55));
 }
 
 .hero-title{
   margin:0;
   font-size: clamp(22px, 3.2vw, 40px);
-  font-weight: 900;
-  letter-spacing: .2px;
+  font-weight:900;
+  letter-spacing:.2px;
 }
 
 .hero-sub{
   margin:0;
   color: var(--muted);
-  font-size: 14px;
+  font-size:14px;
 }
 
 /* ===== LAYOUT ===== */
@@ -159,8 +160,17 @@ body{
   color:var(--muted);
   margin-bottom:8px
 }
-.progress{height:10px; background: rgba(255,255,255,.06); border-radius: 999px; overflow:hidden}
-.progress-bar{height:100%; background: linear-gradient(90deg, var(--accent), var(--good)); width:0%}
+.progress{
+  height:10px;
+  background: rgba(255,255,255,.06);
+  border-radius: 999px;
+  overflow:hidden
+}
+.progress-bar{
+  height:100%;
+  background: linear-gradient(90deg, var(--accent), var(--good));
+  width:0%
+}
 
 .toc{
   display:flex;
@@ -168,7 +178,7 @@ body{
   gap:6px;
   padding:8px 6px 12px;
   overflow:auto;
-  max-height: calc(100vh - 220px)
+  max-height: calc(100vh - 260px)
 }
 .toc a{
   display:flex;
@@ -204,7 +214,7 @@ body{
   gap:14px;
 }
 
-/* ===== CARDS (COLLAPSED BY DEFAULT) ===== */
+/* ===== CARDS ===== */
 .card{
   border:1px solid var(--border);
   background: rgba(17,19,26,.55);
@@ -214,10 +224,7 @@ body{
 }
 
 .card-header{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  align-items:flex-start;
+  display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
   padding:16px 16px 14px;
   cursor:pointer;
 }
@@ -230,9 +237,7 @@ body{
 }
 
 .card-meta{
-  display:flex;
-  gap:10px;
-  align-items:center;
+  display:flex; gap:10px; align-items:center;
   color:var(--muted);
   font-size:12px;
   margin-top:6px
@@ -245,7 +250,6 @@ body{
   border-radius:999px;
 }
 
-/* THIS is what keeps everything collapsed until clicked */
 .card-body{
   border-top:1px solid rgba(255,255,255,.06);
   padding:14px 16px 16px;
@@ -282,9 +286,7 @@ body{
 
 .checklist{display:flex; flex-direction:column; gap:8px}
 .check{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
+  display:flex; gap:10px; align-items:flex-start;
   padding:8px 8px;
   border-radius: 12px;
 }
@@ -319,10 +321,7 @@ body{
 .dialog::backdrop{background: rgba(0,0,0,.55)}
 .dialog-inner{margin:0; padding:0}
 .dialog-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
   padding:14px 14px 10px;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
@@ -345,13 +344,8 @@ body{
   .sidebar{display:none}
   .grid2{grid-template-columns: 1fr}
   .search{width: 48vw}
-
-  .topbar{
-    grid-template-columns: auto 1fr auto;
-    gap: 10px;
-  }
-  .topbar-logo{height: 46px}
-  .hero-logo{height: 115px}
+  .hero-logo{height: 120px}
+  .brand-logo{height: 36px}
 }
 
 /* ===== PRINT ===== */
