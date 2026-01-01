@@ -228,66 +228,65 @@ body{
   .card-body{display:block !important}
   .grid2{grid-template-columns: 1fr}
   .box{border:1px solid #eee; background:#fff}
-}.brand {
+ .brand-logo{
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-
-}/* Tramp Or Die — logo visibility on dark header */
+/* ===== HEADER BRAND LOGO (white + bigger) ===== */
 .brand-logo{
-  height: 42px;
+  height: 52px;
   width: auto;
-  filter: invert(1)
+  /* makes a black logo appear white on dark bg */
+  filter: invert(1) brightness(2) contrast(1.1);
+  /* optional: a soft glow instead of dark shadow */
+  drop-shadow: 0 6px 18px rgba(0,0,0,.25);
 }
 
-
-
-.brand-title {
-  font-weight: 700;
-  letter-spacing: 0.3px;
+@media (max-width: 980px){
+  .brand-logo{ height: 42px; }
 }
 
-.brand-sub {
-  font-size: 12px;
-  opacity: 0.7;
-  
-}
-/* ===== BRANDING ===== */
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* ===== HERO SPLASH ===== */
+.hero{
+  min-height: calc(100vh - 62px); /* full screen minus sticky header */
+  display: grid;
+  place-items: center;
+  padding: 28px 18px;
 }
 
-.brand-logo {
-  height: 42px;
-  width: auto;
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
-}
-
-.brand-text {
+.hero-inner{
+  text-align: center;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  align-items: center;
+  gap: 14px;
 }
 
-.brand-title {
-  font-weight: 800;
-  letter-spacing: 0.4px;
+.hero-logo{
+  height: 160px;          /* BIG logo */
+  width: auto;
+  filter: invert(1) brightness(2) contrast(1.1);
 }
 
-.brand-sub {
-  font-size: 12px;
+.hero-title{
+  margin: 0;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  letter-spacing: .3px;
+}
+
+.hero-sub{
+  margin: 0;
   color: var(--muted);
-  opacity: 0.85;
+  font-size: 14px;
 }
 
-@media (max-width: 980px) {
-  .brand-logo {
-    height: 36px;
-  }
+@media (max-width: 980px){
+  .hero-logo{ height: 110px; }
 }
+
+
 
