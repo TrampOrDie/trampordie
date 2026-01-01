@@ -1,4 +1,4 @@
-Outside Construction Transition Guide — Interactive Web App (Offline)
+Outside Construction Transition Guide
 
 What this is
 - A single-page web app that turns your document into:
