@@ -335,11 +335,13 @@ body{
 .hero-sub {
   color: var(--brand-muted);
 }
-/* HOME MEDIA SIZE CONTROL */
-.home-media,
-.video-wrap,
-.home-hero {
-  max-width: 100px;   /* 🔧 adjust this number */
-  margin-left: auto;
-  margin-right: auto;
+.home-hero{
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--radius2);
+}
+
 }
