@@ -4,79 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tramp Or Die</title>
-
-  <link rel="icon" href="assets/favicon-32.png?v=2" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="icon" href="/assets/favicon-32.png?v=2" />
+  <link rel="stylesheet" href="/styles.css?v=2" />
 </head>
 
 <body>
-  <!-- TOP HEADER -->
   <header class="topbar">
     <div class="topbar-left brand">
-      <img src="assets/tod.1.png" class="brand-logo" alt="Tramp Or Die" />
-        <div class="brand-text">
+      <img src="/assets/tod.1.png" class="brand-logo" alt="Tramp Or Die" />
+      <div class="brand-text">
         <div class="brand-title">Tramp Or Die</div>
         <div class="brand-sub">Interactive guide</div>
       </div>
     </div>
-    
-<nav class="nav">
-  <a class="nav-link" href="/">Home</a>
-  <a class="nav-link" href="/guides/">Guides</a>
-  <a class="nav-link" href="/about/">About</a>
-  <a class="nav-link" href="/blog/">Blog</a>
-  <a class="nav-link" href="/contact/">Contact</a>
-</nav> 
 
-  
-
-     
-      <input id="search" class="search" type="search" placeholder="Search headings & text…" autocomplete="off" />
-      <button id="toggleChecklist" class="btn" type="button" title="Open master checklist">Checklist</button>
-      <button id="print" class="btn" type="button" title="Print / Save to PDF">Print</button>
-    </div>
+    <nav class="nav">
+      <a class="nav-link active" href="/">Home</a>
+      <a class="nav-link" href="/guides/">Guides</a>
+      <a class="nav-link" href="/about/">About</a>
+      <a class="nav-link" href="/blog/">Blog</a>
+      <a class="nav-link" href="/contact/">Contact</a>
+    </nav>
   </header>
 
-<!-- HERO SPLASH -->
-  <section class="hero">
-    <img src="assets/tod.1.png" class="hero-logo" alt="Tramp Or Die" />
-    <h1 class="hero-title">Outside Construction Transition Guide</h1>
-    <p class="hero-sub">Interactive, offline-ready</p>
-  </section>
+  <main class="page">
+    <h1 class="page-title">Home</h1>
+    <p>Welcome to Tramp Or Die.</p>
 
- <!-- APP LAYOUT -->
-  <div class="layout">
-    <main class="main">
-      <div id="content" class="content"></div>
-    </main>
-  </div>
-
-    <!-- MASTER CHECKLIST DIALOG -->
-  <dialog id="checklistDialog" class="dialog">
-    <form method="dialog" class="dialog-inner">
-      <div class="dialog-header">
-        <div>
-          <div class="dialog-title">Master checklist</div>
-          <div class="muted">Across all sections</div>
-        </div>
-        <button class="btn" value="cancel" type="submit">Close</button>
-      </div>
-
-   <div class="dialog-body">
-        <div class="dialog-actions">
-          <button id="markAll" class="btn" type="button">Mark all</button>
-          <button id="clearAll" class="btn btn-ghost" type="button">Clear all</button>
-        </div>
-
-   <div id="masterChecklist" class="master-checklist"></div>
-      </div>
-    </form>
-  </dialog>
-
-  <script src="app.js?v=2"></script>
+    <p><a class="btn" href="/guides/">Open the Guides →</a></p>
+  </main>
 </body>
 </html>
- 
+
      
 
        
