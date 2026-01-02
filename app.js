@@ -316,8 +316,8 @@ function buildMasterChecklist(data){
 }
 
 async function main(){
-  const res = await fetch("data.json");
-  const data = await res.json();
+ const res = await fetch("/data.json");
+   const data = await res.json();
 
   // add slugs
   data.sections = data.sections.map((s, i)=>({
