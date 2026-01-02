@@ -287,3 +287,51 @@ body{
   .grid2{grid-template-columns: 1fr}
   .box{border:1px solid #eee; background:#fff}
 }
+/* ================================
+   BRAND THEME — TRAMP OR DIE
+================================ */
+
+:root {
+  --brand-font: 'Bebas Neue', sans-serif;
+  --brand-white: #f5f5f5;
+  --brand-red: #e10600; /* safety red */
+  --brand-muted: #9a9a9a;
+}
+
+/* TOP NAV */
+.nav-link {
+  font-family: var(--brand-font);
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--brand-white);
+  text-decoration: none;
+  margin-left: 18px;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--brand-red);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: var(--brand-red);
+}
+
+/* PAGE TITLES (Home / About / Blog / Contact) */
+.page h1,
+.hero-title {
+  font-family: var(--brand-font);
+  font-size: 42px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--brand-red);
+  margin-bottom: 16px;
+}
+
+/* Optional sub text */
+.page p,
+.hero-sub {
+  color: var(--brand-muted);
+}
