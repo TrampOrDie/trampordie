@@ -46,4 +46,21 @@
 .hero-sub {
   color: var(--brand-muted);
 }
+.page h2{
+  font-family: var(--brand-font);
+  font-size: 26px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--brand-white);
+  margin: 28px 0 10px;
+}
+
+.page ul{
+  margin: 10px 0 18px 20px;
+}
+
+.page li{
+  margin: 6px 0;
+  color: var(--text);
+}
 
