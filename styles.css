@@ -335,13 +335,18 @@ body{
 .hero-sub {
   color: var(--brand-muted);
 }
-.home-hero{
+/* HOME PAGE PHOTO (Tline.2.jpg) */
+.home-photo{
   width: 100%;
-  max-width: 480px;
+  max-width: 480px;          /* 🔧 adjust this */
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 16px auto;
   border-radius: var(--radius2);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
 }
 
-}
+
+
+
